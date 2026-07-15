@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Investment Strategy Intern — Application</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     SETUP — edit these two values before publishing
+     (search "FORMSPREE_FORM_ID" and "GITHUB_ORG" in the script below)
+     ============================================================ */
+
+  :root{
+    --bg:#0A0A09;
+    --line:rgba(255,255,255,0.10);
+    --line-soft:rgba(255,255,255,0.06);
+    --input-bg:#141412;
+    --gold:#C9A24B;
+    --risk:#8A5A45;
+    --text:#F2EFE8;
+    --text-dim:#8C8A82;
+    --serif:'Fraunces', serif;
+    --mono:'IBM Plex Mono', monospace;
+  }
+
+  *{box-sizing:border-box;}
+  body{
+    margin:0;
+    font-family:var(--mono);
+    background:var(--bg);
+    color:var(--text);
+    -webkit-font-smoothing:antialiased;
+  }
+  h1{font-family:var(--serif); font-weight:500; margin:0; font-size:clamp(34px,5vw,48px); letter-spacing:-.01em;}
+  p{margin:0;}
+  .wrap{max-width:720px; margin:0 auto; padding:64px 28px 80px;}
+
+  .sub{margin-top:16px; font-size:14px; line-height:1.65; color:var(--text-dim); max-width:540px;}
+  .top-rule{margin:40px 0 44px; height:1px; background:linear-gradient(to right, var(--gold), var(--line) 45%);}
+
+  .eyebrow{font-size:12px; letter-spacing:.14em; text-transform:uppercase; color:var(--gold);}
+  .divider-row{display:flex; align-items:center; gap:18px; margin-bottom:24px;}
+  .divider-row .line{flex:1; height:1px; background:var(--line);}
+
+  form{display:grid; gap:44px;}
+  .field-group{display:grid; gap:22px;}
+  .row2{display:grid; grid-template-columns:1fr 1fr; gap:22px;}
+  .row3{display:grid; grid-template-columns:1fr 1fr 1fr; gap:22px;}
+
+  .field label{
+    display:block; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--text-dim); margin-bottom:10px;
+  }
+  .field label .req{color:var(--gold);}
+  .field .hint{font-size:11px; color:var(--text-dim); margin-top:6px; text-transform:none; letter-spacing:0;}
+
+  input, select, textarea{
+    width:100%; background:var(--input-bg); border:1px solid var(--line); color:var(--text);
+    padding:13px 14px; font-family:var(--mono); font-size:13px;
+  }
+  input:focus, select:focus, textarea:focus{outline:none; border-color:var(--gold);}
+  textarea{resize:vertical; min-height:100px; line-height:1.6;}
+  select{appearance:none; -webkit-appearance:none; background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='%238C8A82'><path d='M5 7l5 6 5-6z'/></svg>"); background-repeat:no-repeat; background-position:right 14px center;}
+  input[type=file]{padding:11px 14px; font-size:12px; color:var(--text-dim);}
+  input[type=file]::file-selector-button{
+    background:var(--gold); color:#0A0A09; border:none; padding:8px 14px; font-family:var(--mono);
+    font-size:11px; text-transform:uppercase; letter-spacing:.05em; margin-right:12px; cursor:pointer;
+  }
+
+  .check-grid{display:grid; grid-template-columns:repeat(auto-fill,minmax(140px,1fr)); gap:12px;}
+  .check-item{
+    display:flex; align-items:center; gap:10px; border:1px solid var(--line); padding:11px 12px; font-size:12px; color:var(--text-dim);
+  }
+  .check-item input{width:auto; padding:0; accent-color:var(--gold);}
+  .check-item.checked{color:var(--text); border-color:var(--gold);}
+
+  .radio-row{display:flex; gap:22px; flex-wrap:wrap;}
+  .radio-item{display:flex; align-items:center; gap:8px; font-size:13px; color:var(--text-dim);}
+  .radio-item input{width:auto; accent-color:var(--gold);}
+
+  .gh-preview{margin-top:8px; font-size:12px; color:var(--text-dim); min-height:16px;}
+  .gh-preview.ok{color:var(--gold);}
+  .gh-preview.err{color:var(--risk);}
+
+  .submit-row{display:flex; justify-content:flex-end; align-items:center; gap:18px; border-top:1px solid var(--line-soft); padding-top:32px;}
+  #formMsg{font-size:12px;}
+  #formMsg.ok{color:var(--gold);}
+  #formMsg.err{color:var(--risk);}
+
+  .btn{
+    display:inline-flex; align-items:center; gap:8px; font-family:var(--mono);
+    padding:14px 22px; border:none; font-size:12px; letter-spacing:.1em;
+    text-transform:uppercase; background:var(--gold); color:#0A0A09; font-weight:500; cursor:pointer;
+    transition:background .15s ease;
+  }
+  .btn:hover{background:#dcb663;}
+  .btn:disabled{opacity:.6; cursor:default;}
+
+  @media (max-width:640px){
+    .row2, .row3{grid-template-columns:1fr;}
+    .submit-row{justify-content:stretch; flex-direction:column-reverse;}
+    .submit-row button{width:100%; justify-content:center;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <h1>Investment Strategy Intern Application</h1>
+  <p class="sub">Applications are reviewed on a rolling basis. Only shortlisted candidates will be contacted.</p>
+  <div class="top-rule"></div>
+
+  <form id="applyForm">
+
+    <div class="field-group">
+      <div class="divider-row"><span class="eyebrow">Basic Info</span><span class="line"></span></div>
+      <div class="row2">
+        <div class="field"><label for="firstName">First name <span class="req">*</span></label><input type="text" id="firstName" name="first_name" required></div>
+        <div class="field"><label for="lastName">Last name <span class="req">*</span></label><input type="text" id="lastName" name="last_name" required></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="email">Email <span class="req">*</span></label><input type="email" id="email" name="email" required></div>
+        <div class="field"><label for="phone">Phone</label><input type="tel" id="phone" name="phone"></div>
+      </div>
+      <div class="row2">
+        <div class="field"><label for="school">School <span class="req">*</span></label><input type="text" id="school" name="school" placeholder="e.g. NYU Stern" required></div>
+        <div class="field"><label for="grade">Grade / year <span class="req">*</span></label>
+          <select id="grade" name="grade" required>
+            <option value="">Select</option>
+            <option>Freshman</option>
+            <option>Sophomore</option>
+            <option>Junior</option>
+            <option>Senior</option>
+            <option>Graduate student</option>
+            <option>Recent graduate</option>
+          </select>
+        </div>
+      </div>
+      <div class="field"><label for="location">Location (city, state / country) <span class="req">*</span></label><input type="text" id="location" name="location" required></div>
+    </div>
+
+    <div class="field-group">
+      <div class="divider-row"><span class="eyebrow">Experience</span><span class="line"></span></div>
+
+      <div class="field">
+        <label for="linkedin">LinkedIn profile</label>
+        <input type="url" id="linkedin" name="linkedin_url" placeholder="https://linkedin.com/in/you">
+      </div>
+
+      <div class="field">
+        <label for="resume">Resume (PDF)</label>
+        <input type="file" id="resume" name="resume" accept=".pdf">
+      </div>
+
+      <div class="field">
+        <label>Tools / skills you're comfortable with</label>
+        <div class="check-grid" id="skillGrid">
+          <label class="check-item"><input type="checkbox" name="skills" value="Python"> Python</label>
+          <label class="check-item"><input type="checkbox" name="skills" value="Excel / Sheets"> Excel / Sheets</label>
+          <label class="check-item"><input type="checkbox" name="skills" value="SQL"> SQL</label>
+          <label class="check-item"><input type="checkbox" name="skills" value="R"> R</label>
+          <label class="check-item"><input type="checkbox" name="skills" value="Bloomberg Terminal"> Bloomberg Terminal</label>
+          <label class="check-item"><input type="checkbox" name="skills" value="Financial modeling"> Financial modeling</label>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="experience">Relevant experience</label>
+        <textarea id="experience" name="relevant_experience" placeholder="Clubs, coursework, internships, personal projects, or research related to markets, data, or investing..."></textarea>
+      </div>
+    </div>
+
+    <div class="field-group">
+      <div class="divider-row"><span class="eyebrow">Short Answer</span><span class="line"></span></div>
+      <div class="field">
+        <label for="why">Why do you want to join the strategy team? <span class="req">*</span></label>
+        <textarea id="why" name="why_interested" required></textarea>
+      </div>
+      <div class="field">
+        <label for="contribute">Describe a time you tested an idea against real data and it didn't hold up. What did you do?</label>
+        <textarea id="contribute" name="testing_example"></textarea>
+      </div>
+      <div class="field">
+        <label for="notes">Anything else you want us to know?</label>
+        <textarea id="notes" name="additional_notes"></textarea>
+      </div>
+    </div>
+
+    <div class="submit-row">
+      <span id="formMsg"></span>
+      <button type="submit" class="btn" id="submitBtn">Submit application →</button>
+    </div>
+  </form>
+</div>
+
+<script>
+/* ============================================================
+   CONFIG — set these two values before publishing
+   ============================================================ */
+const FORMSPREE_FORM_ID = "mrenboar";   // from https://formspree.io/f/mrenboar
+/* ============================================================ */
+
+// highlight checked skill chips
+document.querySelectorAll("#skillGrid input").forEach(cb => {
+  cb.addEventListener("change", () => cb.closest(".check-item").classList.toggle("checked", cb.checked));
+});
+
+// Formspree submission
+document.getElementById("applyForm").addEventListener("submit", async (e) => {
+  e.preventDefault();
+  const form = e.target;
+  const msg = document.getElementById("formMsg");
+  const btn = document.getElementById("submitBtn");
+
+  if (FORMSPREE_FORM_ID === "YOUR_FORM_ID"){
+    msg.textContent = "Set FORMSPREE_FORM_ID in the page script before accepting applications.";
+    msg.className = "err";
+    return;
+  }
+
+  btn.disabled = true;
+  btn.textContent = "Submitting…";
+  msg.textContent = "";
+  msg.className = "";
+
+  try{
+    const res = await fetch(`https://formspree.io/f/${FORMSPREE_FORM_ID}`, {
+      method: "POST",
+      headers: { "Accept": "application/json" },
+      body: new FormData(form),
+    });
+    if (res.ok){
+      msg.textContent = "Application received — thank you.";
+      msg.className = "ok";
+      form.reset();
+      document.querySelectorAll("#skillGrid .check-item").forEach(el => el.classList.remove("checked"));
+    } else {
+      const data = await res.json().catch(() => ({}));
+      msg.textContent = (data.errors && data.errors.map(x => x.message).join(", ")) || "Something went wrong — please try again.";
+      msg.className = "err";
+    }
+  } catch {
+    msg.textContent = "Network error — please try again.";
+    msg.className = "err";
+  } finally {
+    btn.disabled = false;
+    btn.textContent = "Submit application →";
+  }
+});
+</script>
+</body>
+</html>
